@@ -32,4 +32,5 @@
 - (int)valueInDollars;
 
 - (NSDate *)dateCreated;
+
 @end
