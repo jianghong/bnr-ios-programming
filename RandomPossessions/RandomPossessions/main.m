@@ -7,14 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRItem.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        // Create a mutable array object, store its address in items variable
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 10; i++) {
+            BNRItem *p = [BNRItem randomItem];
+            [items addObject:p];
+        }
+        
+        for (int i = 0; i < [items count]; i ++) {
+            NSLog(@"%@", [items objectAtIndex:i]);
+        }
+        
+        // Destroy the array pointed to by items
+        items = nil;
         
     }
     return 0;
