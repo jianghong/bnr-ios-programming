@@ -26,6 +26,7 @@ int main(int argc, const char * argv[])
             NSLog(@"%@", item);
         }
         
+        NSLog(@"%@", [items objectAtIndex:11 ]);
         // Destroy the array pointed to by items
         items = nil;
         
