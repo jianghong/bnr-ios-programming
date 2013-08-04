@@ -25,6 +25,9 @@ int main(int argc, const char * argv[])
         for (BNRItem *item in items) {
             NSLog(@"%@", item);
         }
+       
+        BNRItem *novalue = [[BNRItem alloc] initWithItemName:@"Love" serialNumber:@"<3"];
+        NSLog(@"This item has no value: %@", novalue);
         
         // Destroy the array pointed to by items
         items = nil;
