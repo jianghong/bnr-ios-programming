@@ -22,6 +22,7 @@
         // Create location manager object
         locationManager = [[CLLocationManager alloc] init];
         
+        
         [locationManager setDelegate:self];
         
         // And we want it to be as accurate as possible
