@@ -18,6 +18,7 @@
 		7A36FD4C17AF3981005754DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A36FD4B17AF3981005754DC /* Default-568h@2x.png */; };
 		7A36FD4F17AF3981005754DC /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A36FD4E17AF3981005754DC /* WhereamiViewController.m */; };
 		7A36FD5217AF3981005754DC /* WhereamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A36FD5017AF3981005754DC /* WhereamiViewController.xib */; };
+		7A8C015617B02CE600C68CE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8C015517B02CE600C68CE5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7A36FD4D17AF3981005754DC /* WhereamiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
 		7A36FD4E17AF3981005754DC /* WhereamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
 		7A36FD5117AF3981005754DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhereamiViewController.xib; sourceTree = "<group>"; };
+		7A8C015517B02CE600C68CE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8C015617B02CE600C68CE5 /* CoreLocation.framework in Frameworks */,
 				7A36FD3617AF3981005754DC /* UIKit.framework in Frameworks */,
 				7A36FD3817AF3981005754DC /* Foundation.framework in Frameworks */,
 				7A36FD3A17AF3981005754DC /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		7A36FD3417AF3981005754DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A8C015517B02CE600C68CE5 /* CoreLocation.framework */,
 				7A36FD3517AF3981005754DC /* UIKit.framework */,
 				7A36FD3717AF3981005754DC /* Foundation.framework */,
 				7A36FD3917AF3981005754DC /* CoreGraphics.framework */,
@@ -299,6 +303,7 @@
 				7A36FD5717AF3981005754DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
