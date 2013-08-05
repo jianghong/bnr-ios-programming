@@ -9,6 +9,8 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
+@synthesize itemName;
+@synthesize container, containedItem, serialNumber, valueInDollars, dateCreated;
 
 + (id)randomItem {
     // Create an array of three adjectives
@@ -78,63 +80,15 @@
     return descriptionString;
 }
 
-- (void)setContainedItem:(BNRItem *)i
-{
-    containedItem = i;
-    
-    // When given an item to contain, the contained
-    // item will be given a pointer to its container
-    [i setContainer:self];
-}
-
-- (BNRItem *)containedItem
-{
-    return containedItem;
-}
-
-- (void)setContainer:(BNRItem *)i
-{
-    container = i;
-}
-- (BNRItem *)container
-{
-    return container;
-}
-
-- (void) setItemName:(NSString *)str
-{
-    itemName = str;
-}
-- (NSString *)itemName
-{
-    return itemName;
-}
-
-- (void)setSerialNumber:(NSString *)str
-{
-    serialNumber = str;
-}
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-
-- (void)setValueInDollars:(int)i
-{
-    valueInDollars = i;
-}
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return dateCreated;
-}
 
 - (void)dealloc
 {
     NSLog(@"Destroyed: %@", self);
+}
+
+- (void)setContainedItem:(BNRItem *)i
+{
+    containedItem = i;
+    [i setContainer:self];
 }
 @end
