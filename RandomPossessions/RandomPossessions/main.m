@@ -27,6 +27,7 @@ int main(int argc, const char * argv[])
         }
         
         // Destroy the array pointed to by items
+        NSLog(@"Setting items to nil...");
         items = nil;
         
     }
