@@ -29,6 +29,10 @@
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         
+        // set distance filter to 50
+        // only report updates when distance changes more than 50 meters
+        [locationManager setDistanceFilter: 50];
+        
         // Tell the manager to start looking for its location immediately
         [locationManager startUpdatingLocation];
     }
