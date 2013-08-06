@@ -14,6 +14,11 @@
 
 @implementation WhereamiViewController
 
+- (void)viewDidLoad
+{
+    [worldView setShowsUserLocation:YES];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,8 +34,6 @@
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         
-        // Tell the manager to start looking for its location immediately
-        [locationManager startUpdatingLocation];
     }
     
     return self;
@@ -52,5 +55,12 @@ didFailWithError:(NSError *)error
 {
     // Tell the location manager to stop sending us messages
     [locationManager setDelegate:nil];
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:YES];
 }
 @end
