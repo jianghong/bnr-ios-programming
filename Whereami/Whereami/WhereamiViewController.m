@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
+    [worldView setMapType:MKMapTypeSatellite];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
