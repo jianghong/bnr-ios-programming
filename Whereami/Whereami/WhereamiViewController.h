@@ -20,6 +20,7 @@
     
 }
 
+
 - (void)findLocation;
 - (void)foundLocation:(CLLocation *)loc;
 

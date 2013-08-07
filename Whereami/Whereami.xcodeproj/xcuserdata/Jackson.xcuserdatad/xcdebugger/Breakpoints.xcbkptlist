@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whereami/WhereamiViewController.m"
-         timestampString = "397530909.708325"
+         timestampString = "397535716.218305"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
          landmarkName = "-initWithNibName:bundle:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,12 +21,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whereami/WhereamiViewController.m"
-         timestampString = "397530909.708325"
+         timestampString = "397535716.218305"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Whereami/WhereamiViewController.m"
+         timestampString = "397536835.430427"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
+         landmarkName = "-foundLocation:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

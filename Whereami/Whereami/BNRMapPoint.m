@@ -10,7 +10,7 @@
 
 @implementation BNRMapPoint
 
-@synthesize coordinate, title;
+@synthesize coordinate, title, subtitle;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t
 {

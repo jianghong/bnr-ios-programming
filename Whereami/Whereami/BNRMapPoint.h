@@ -23,4 +23,7 @@
 // This is an optional property from MKAnnotation
 @property (nonatomic, copy) NSString *title;
 
+// Add subtitle for date
+@property (nonatomic, copy)NSString *subtitle;
+
 @end

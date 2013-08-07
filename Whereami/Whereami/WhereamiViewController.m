@@ -15,6 +15,8 @@
 
 @implementation WhereamiViewController
 
+
+
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
@@ -99,9 +101,20 @@ didFailWithError:(NSError *)error
     CLLocationCoordinate2D coord = [loc coordinate];
     
     // Create an instance of BNRMapPoint with the current data
-    
     BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord title:[locationTitleField text]];
    
+    // set subtitle to current date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSDate *date = [loc timestamp];
+    NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [dateFormatter setLocale:usLocale];
+    
+    NSLog(@"Date for locale %@: %@",
+          [[dateFormatter locale] localeIdentifier], [dateFormatter stringFromDate:date]);
+    [mp setSubtitle:[NSString stringWithFormat:@"Tagged on: %@", [dateFormatter stringFromDate:date]]];
     // Add it to the map view
     [worldView addAnnotation:mp];
     
