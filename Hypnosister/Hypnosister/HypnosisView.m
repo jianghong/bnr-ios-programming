@@ -70,7 +70,7 @@
         CGContextStrokePath(ctx);
         
     }
-    
+   
     // Create a string
     NSString *text = @"You are getting sleepy.";
     
@@ -95,12 +95,43 @@
     // The shadow will be dark gray in color
     CGColorRef color = [[UIColor darkGrayColor] CGColor];
     
+    // save state before shadow is applied
+    CGContextSaveGState(ctx);
     // Set the shadow of the context with these parameters,
     // all subsequent drawing will be shadowed
     CGContextSetShadowWithColor(ctx, offset, 2.0, color);
     
     // Draw the string
     [text drawInRect:textRect withFont:font];
+    
+    // Draw green crosshair in center of view
+    // pop state with no shadow off graphics state stack
+    CGContextRestoreGState(ctx);
+    CGContextSetLineWidth(ctx, 5);
+    [[UIColor greenColor] setStroke];
+    
+    // draw right
+    CGContextMoveToPoint(ctx, center.x, center.y);
+    CGContextAddLineToPoint(ctx, center.x + 20, center.y);
+    CGContextStrokePath(ctx);
+    
+    // pop the saved state off
+    // draw down
+    CGContextMoveToPoint(ctx, center.x, center.y);
+    CGContextAddLineToPoint(ctx, center.x, center.y + 20);
+    CGContextStrokePath(ctx);
+    
+    // pop the saved state off
+    // draw left
+    CGContextMoveToPoint(ctx, center.x, center.y);
+    CGContextAddLineToPoint(ctx, center.x - 20, center.y);
+    CGContextStrokePath(ctx);
+    
+    // pop the saved state off
+    // draw up
+    CGContextMoveToPoint(ctx, center.x, center.y);
+    CGContextAddLineToPoint(ctx, center.x, center.y - 20);
+    CGContextStrokePath(ctx);
     
     
 }
