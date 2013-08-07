@@ -20,7 +20,14 @@
     HypnosisView *view = [[HypnosisView alloc] initWithFrame:[[self window] bounds]];
     
     [[self window] addSubview:view];
-       
+    
+    BOOL success = [view becomeFirstResponder];
+    if (success) {
+        NSLog(@"HypnosisView became the first responder");
+    } else {
+        NSLog(@"Could not become the first responder");
+    }
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
