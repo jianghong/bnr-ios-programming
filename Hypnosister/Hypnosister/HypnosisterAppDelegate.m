@@ -37,6 +37,14 @@
     // Add the HypnosisView as a subview of the scrollView instead of the window
     [scrollView addSubview:view];
     
+    // Create SegmentedControl view and add it to scrollview
+    NSArray *itemArray = [NSArray arrayWithObjects:@"Light Gray", @"Blue", @"Yellow", nil];
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+    segmentedControl.selectedSegmentIndex = 0;
+    [segmentedControl addTarget:self action:@selector(colorChange:) forControlEvents:UIControlEventValueChanged];
+    
+    [scrollView addSubview:segmentedControl];
+    
     // Move the rectangle for the other HypnosisView to the right, just off
     // the screen
     screenRect.origin.x = screenRect.size.width;
@@ -56,6 +64,23 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)colorChange:(id)sender
+{
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            [view setCircleColor:[UIColor lightGrayColor]];
+            break;
+        case 1:
+            [view setCircleColor:[UIColor blueColor]];
+            break;
+        case 2:
+            [view setCircleColor:[UIColor yellowColor]];
+            break;
+        default:
+            break;
+    }
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
