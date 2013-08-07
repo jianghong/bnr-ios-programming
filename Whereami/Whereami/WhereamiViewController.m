@@ -116,4 +116,25 @@ didFailWithError:(NSError *)error
     [locationManager stopUpdatingLocation];
 }
 
+- (IBAction)changeMapType:(id)sender
+{
+    NSLog(@"Segment number: %d", [sender selectedSegmentIndex]);
+    NSInteger selectedType = [sender selectedSegmentIndex];
+    
+    switch (selectedType)
+    {
+        case 0:
+            NSLog(@"Normal Map Type.");
+            [worldView setMapType:MKMapTypeStandard];
+            break;
+        case 1:
+            NSLog(@"Satellite Map Type.");
+            [worldView setMapType:MKMapTypeSatellite];
+            break;
+        case 2:
+            NSLog(@"Hybrid Map Type.");
+            [worldView setMapType:MKMapTypeHybrid];
+    }
+}
+
 @end

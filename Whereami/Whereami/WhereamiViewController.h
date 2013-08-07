@@ -22,5 +22,6 @@
 
 - (void)findLocation;
 - (void)foundLocation:(CLLocation *)loc;
+- (IBAction)changeMapType:(id)sender;
 
 @end
