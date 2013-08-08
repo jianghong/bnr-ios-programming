@@ -20,6 +20,7 @@
 		7A88743E17B28903006D4F3A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A88743D17B28903006D4F3A /* Default@2x.png */; };
 		7A88744017B28903006D4F3A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A88743F17B28903006D4F3A /* Default-568h@2x.png */; };
 		7A88744817B28CCC006D4F3A /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A88744717B28CCC006D4F3A /* HypnosisView.m */; };
+		7AD8A9D917B3E382006380A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD8A9D817B3E382006380A4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7A88743F17B28903006D4F3A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7A88744617B28CCC006D4F3A /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
 		7A88744717B28CCC006D4F3A /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		7AD8A9D817B3E382006380A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD8A9D917B3E382006380A4 /* QuartzCore.framework in Frameworks */,
 				7A88742A17B28903006D4F3A /* UIKit.framework in Frameworks */,
 				7A88742C17B28903006D4F3A /* Foundation.framework in Frameworks */,
 				7A88742E17B28903006D4F3A /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +81,7 @@
 		7A88742817B28903006D4F3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AD8A9D817B3E382006380A4 /* QuartzCore.framework */,
 				7A88742917B28903006D4F3A /* UIKit.framework */,
 				7A88742B17B28903006D4F3A /* Foundation.framework */,
 				7A88742D17B28903006D4F3A /* CoreGraphics.framework */,
