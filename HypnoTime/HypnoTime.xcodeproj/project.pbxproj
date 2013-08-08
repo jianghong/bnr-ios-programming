@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A11AD5A17B426D800E07793 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A11AD5917B426D800E07793 /* MapKit.framework */; };
 		7A928C2317B3E9CE0012AF6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A928C2217B3E9CE0012AF6B /* UIKit.framework */; };
 		7A928C2517B3E9CE0012AF6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A928C2417B3E9CE0012AF6B /* Foundation.framework */; };
 		7A928C2717B3E9CE0012AF6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A928C2617B3E9CE0012AF6B /* CoreGraphics.framework */; };
@@ -24,9 +25,13 @@
 		7A928C5117B406B30012AF6B /* Hypno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A928C4D17B406B30012AF6B /* Hypno@2x.png */; };
 		7A928C5217B406B30012AF6B /* Time.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A928C4E17B406B30012AF6B /* Time.png */; };
 		7A928C5317B406B30012AF6B /* Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A928C4F17B406B30012AF6B /* Time@2x.png */; };
+		7A928C5517B419390012AF6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A928C5417B419390012AF6B /* CoreLocation.framework */; };
+		7A928C5817B4199E0012AF6B /* MKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A928C5717B4199E0012AF6B /* MKMapViewController.m */; };
+		7A928C5C17B41FC20012AF6B /* MKMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A928C5B17B41FC20012AF6B /* MKMapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A11AD5917B426D800E07793 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A928C1F17B3E9CE0012AF6B /* HypnoTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypnoTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A928C2217B3E9CE0012AF6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A928C2417B3E9CE0012AF6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +56,10 @@
 		7A928C4D17B406B30012AF6B /* Hypno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hypno@2x.png"; sourceTree = "<group>"; };
 		7A928C4E17B406B30012AF6B /* Time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time.png; sourceTree = "<group>"; };
 		7A928C4F17B406B30012AF6B /* Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time@2x.png"; sourceTree = "<group>"; };
+		7A928C5417B419390012AF6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7A928C5617B4199E0012AF6B /* MKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewController.h; sourceTree = "<group>"; };
+		7A928C5717B4199E0012AF6B /* MKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewController.m; sourceTree = "<group>"; };
+		7A928C5B17B41FC20012AF6B /* MKMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MKMapViewController.xib; path = ../MKMapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A11AD5A17B426D800E07793 /* MapKit.framework in Frameworks */,
+				7A928C5517B419390012AF6B /* CoreLocation.framework in Frameworks */,
 				7A928C2317B3E9CE0012AF6B /* UIKit.framework in Frameworks */,
 				7A928C2517B3E9CE0012AF6B /* Foundation.framework in Frameworks */,
 				7A928C2717B3E9CE0012AF6B /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +81,7 @@
 		7A928C1617B3E9CE0012AF6B = {
 			isa = PBXGroup;
 			children = (
+				7A11AD5917B426D800E07793 /* MapKit.framework */,
 				7A928C2817B3E9CE0012AF6B /* HypnoTime */,
 				7A928C2117B3E9CE0012AF6B /* Frameworks */,
 				7A928C2017B3E9CE0012AF6B /* Products */,
@@ -87,6 +99,7 @@
 		7A928C2117B3E9CE0012AF6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A928C5417B419390012AF6B /* CoreLocation.framework */,
 				7A928C2217B3E9CE0012AF6B /* UIKit.framework */,
 				7A928C2417B3E9CE0012AF6B /* Foundation.framework */,
 				7A928C2617B3E9CE0012AF6B /* CoreGraphics.framework */,
@@ -102,6 +115,9 @@
 				7A928C4417B3EA740012AF6B /* HypnosisView.h */,
 				7A928C4517B3EA740012AF6B /* HypnosisView.m */,
 				7A928C3117B3E9CE0012AF6B /* HypnoAppDelegate.h */,
+				7A928C5B17B41FC20012AF6B /* MKMapViewController.xib */,
+				7A928C5617B4199E0012AF6B /* MKMapViewController.h */,
+				7A928C5717B4199E0012AF6B /* MKMapViewController.m */,
 				7A928C3217B3E9CE0012AF6B /* HypnoAppDelegate.m */,
 				7A928C4717B3EC250012AF6B /* TimeViewController.h */,
 				7A928C4817B3EC250012AF6B /* TimeViewController.m */,
@@ -190,6 +206,7 @@
 				7A928C5117B406B30012AF6B /* Hypno@2x.png in Resources */,
 				7A928C5217B406B30012AF6B /* Time.png in Resources */,
 				7A928C5317B406B30012AF6B /* Time@2x.png in Resources */,
+				7A928C5C17B41FC20012AF6B /* MKMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +222,7 @@
 				7A928C4117B3EA160012AF6B /* HypnosisViewController.m in Sources */,
 				7A928C4617B3EA740012AF6B /* HypnosisView.m in Sources */,
 				7A928C4917B3EC250012AF6B /* TimeViewController.m in Sources */,
+				7A928C5817B4199E0012AF6B /* MKMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +337,7 @@
 				7A928C3E17B3E9CE0012AF6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
