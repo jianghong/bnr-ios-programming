@@ -8,6 +8,7 @@
 
 #import "HypnoAppDelegate.h"
 #import "HypnosisViewController.h"
+#import "TimeViewController.h"
 
 @implementation HypnoAppDelegate
 
@@ -17,7 +18,9 @@
     // Override point for customization after application launch.
     
     HypnosisViewController *hvc = [[HypnosisViewController alloc] init];
-    [[self window] setRootViewController:hvc];
+    TimeViewController *tvc = [[TimeViewController alloc] init];
+    
+    [[self window] setRootViewController:tvc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
