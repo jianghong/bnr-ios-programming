@@ -7,6 +7,7 @@
 //
 
 #import "HypnosisView.h"
+#import "HypnosisViewController.h"
 
 @implementation HypnosisView
 @synthesize circleColor;
@@ -103,5 +104,22 @@
     [text drawInRect:textRect withFont:font];
     
     
+}
+
+- (void)changeCircleColor:(id)sender
+{
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            [self setCircleColor:[UIColor lightGrayColor]];
+            break;
+        case 1:
+            [self setCircleColor:[UIColor blueColor]];
+            break;
+        case 2:
+            [self setCircleColor:[UIColor yellowColor]];
+            break;
+        default:
+            break;
+    }
 }
 @end
