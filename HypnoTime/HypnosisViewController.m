@@ -41,8 +41,8 @@
     
     NSArray *colors = [[NSArray alloc] initWithObjects:@"Light Gray", @"Blue", @"Yellow", nil];
     UISegmentedControl *colorChoices = [[UISegmentedControl alloc] initWithItems:colors];
-    [colorChoices s]
-    [colorChoices addTarget:self action:@selector(changeCircleColor) forControlEvents:UIControlEventValueChanged];
+    [colorChoices setSelectedSegmentIndex:0];
+    [colorChoices addTarget:v action:@selector(changeCircleColor:) forControlEvents:UIControlEventValueChanged];
     
     [v addSubview:colorChoices];
     // Set it as *the* view of this view controller
