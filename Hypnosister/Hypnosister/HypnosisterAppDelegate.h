@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)colorChange:(id)sender;
+
 @end
