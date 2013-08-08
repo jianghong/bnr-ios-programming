@@ -8,6 +8,7 @@
 
 #import "HypnosisterAppDelegate.h"
 #import "HypnosisView.h"
+#import "BNRLogoView.h"
 
 @implementation HypnosisterAppDelegate
 
@@ -45,6 +46,18 @@
     
     // Tell the scrollView how big its virtual world is
     [scrollView setContentSize:bigRect.size];
+    
+    // get size of logo
+    UIImage *logo = [[UIImage alloc] initWithContentsOfFile:@"/Users/Jackson/Dropbox/iOS-Dev/BNR/Hypnosister/Hypnosister/Icon.png"];
+    NSLog(@"%f by %f", [logo size].height, [logo size].width);
+    
+    // create frame to add BNRLogoVIew
+    CGRect BNRLogoRect = CGRectMake(0, 0, [logo size].width, [logo size].height);
+    
+    // Add BNRLogoView
+    BNRLogoView *logoView = [[BNRLogoView alloc] initWithFrame:BNRLogoRect];
+    
+    [view addSubview:logoView];
     
     BOOL success = [view becomeFirstResponder];
     if (success) {
