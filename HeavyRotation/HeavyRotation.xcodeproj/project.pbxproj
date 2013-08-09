@@ -18,6 +18,7 @@
 		7A0BC8DF17B4858800E6502A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0BC8DE17B4858800E6502A /* Default-568h@2x.png */; };
 		7A0BC8E817B4875B00E6502A /* HeavyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0BC8E617B4875B00E6502A /* HeavyViewController.m */; };
 		7A0BC8E917B4875B00E6502A /* HeavyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0BC8E717B4875B00E6502A /* HeavyViewController.xib */; };
+		7A39CC5E17B530FD00D3BB2D /* joeeye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A39CC5D17B530FD00D3BB2D /* joeeye.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7A0BC8E517B4875B00E6502A /* HeavyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeavyViewController.h; sourceTree = "<group>"; };
 		7A0BC8E617B4875B00E6502A /* HeavyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeavyViewController.m; sourceTree = "<group>"; };
 		7A0BC8E717B4875B00E6502A /* HeavyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeavyViewController.xib; sourceTree = "<group>"; };
+		7A39CC5D17B530FD00D3BB2D /* joeeye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = joeeye.jpg; path = "../../../../../Downloads/iOS Programming 3e Solutions/00. Resources/joeeye.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		7A0BC8CF17B4858700E6502A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7A39CC5D17B530FD00D3BB2D /* joeeye.jpg */,
 				7A0BC8D017B4858700E6502A /* HeavyRotation-Info.plist */,
 				7A0BC8D117B4858800E6502A /* InfoPlist.strings */,
 				7A0BC8D417B4858800E6502A /* main.m */,
@@ -164,6 +167,7 @@
 				7A0BC8DD17B4858800E6502A /* Default@2x.png in Resources */,
 				7A0BC8DF17B4858800E6502A /* Default-568h@2x.png in Resources */,
 				7A0BC8E917B4875B00E6502A /* HeavyViewController.xib in Resources */,
+				7A39CC5E17B530FD00D3BB2D /* joeeye.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +260,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeavyRotation/HeavyRotation-Prefix.pch";
 				INFOPLIST_FILE = "HeavyRotation/HeavyRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -267,7 +273,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeavyRotation/HeavyRotation-Prefix.pch";
 				INFOPLIST_FILE = "HeavyRotation/HeavyRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -291,6 +299,7 @@
 				7A0BC8E417B4858800E6502A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

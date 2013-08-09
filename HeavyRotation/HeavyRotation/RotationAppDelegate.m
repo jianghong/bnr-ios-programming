@@ -7,6 +7,7 @@
 //
 
 #import "RotationAppDelegate.h"
+#import "HeavyViewController.h"
 
 @implementation RotationAppDelegate
 
@@ -29,6 +30,9 @@
            selector:@selector(orientationChanged:)
                name:UIDeviceOrientationDidChangeNotification
              object:device];
+    HeavyViewController *hvc = [[HeavyViewController alloc] init];
+    [[self window] setRootViewController:hvc];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

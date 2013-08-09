@@ -14,5 +14,10 @@
 
 @implementation HeavyViewController
 
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    // Return YES if incoming orientation is Portrait
+    // or either of the Landscapes, otherwise, return NO
+    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+}
 @end
