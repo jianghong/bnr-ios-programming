@@ -18,6 +18,8 @@
     
     // Get the device object
     UIDevice *device = [UIDevice currentDevice];
+   
+    [device setProximityMonitoringEnabled:YES];
     
     // Tell it to start monitoring the accelerometer for orientation
     [device beginGeneratingDeviceOrientationNotifications];
