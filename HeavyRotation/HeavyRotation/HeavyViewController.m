@@ -20,4 +20,12 @@
     // or either of the Landscapes, otherwise, return NO
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
 }
+
+- (void)viewDidLoad
+{
+
+    // set subviews autoresizing masks
+    [[self slider] setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [[self imView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+}
 @end

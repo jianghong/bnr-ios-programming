@@ -30,7 +30,8 @@
            selector:@selector(orientationChanged:)
                name:UIDeviceOrientationDidChangeNotification
              object:device];
-    HeavyViewController *hvc = [[HeavyViewController alloc] init];
+    HeavyViewController *hvc = [[HeavyViewController alloc] init];    
+    
     [[self window] setRootViewController:hvc];
     
     self.window.backgroundColor = [UIColor whiteColor];

@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface HeavyViewController : UIViewController
+{
+}
+
+@property (nonatomic) IBOutlet UISlider *slider;
+@property (nonatomic) IBOutlet UIImageView *imView;
+@property (nonatomic) IBOutlet UIButton *buttonLeft;
+@property (nonatomic) IBOutlet UIButton *buttonRight;
 
 @end
