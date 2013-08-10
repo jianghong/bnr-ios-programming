@@ -14,10 +14,19 @@
 
 @implementation HeavyViewController
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    // Return YES if incoming orientation is Portrait
-    // or either of the Landscapes, otherwise, return NO
-    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+    CGRect bounds = [[self view] bounds];
+    
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+        // get the right hand side center point to put the button
+        
+        CGPoint rightCenter = CGPointMake(bounds.size.width - ([[self button] bounds].size.width / 2), bounds.size.height /2);
+        
+        [[self button] setCenter:rightCenter];
+    }
+    
+    
 }
 @end

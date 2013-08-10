@@ -10,4 +10,6 @@
 
 @interface HeavyViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIButton *button;
+
 @end
