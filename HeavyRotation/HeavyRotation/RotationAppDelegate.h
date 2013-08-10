@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 - (void)orientationChanged:(NSNotification *)note;
+- (void)faceDetected:(NSNotification *)note;
 
 @end

@@ -32,6 +32,11 @@
            selector:@selector(orientationChanged:)
                name:UIDeviceOrientationDidChangeNotification
              object:device];
+    
+    [nc addObserver:self
+           selector:@selector(faceDetected)
+               name:UIDeviceProximityStateDidChangeNotification
+             object:device];
     HeavyViewController *hvc = [[HeavyViewController alloc] init];
     [[self window] setRootViewController:hvc];
     
@@ -44,6 +49,16 @@
 {
     // Log the constant that represents the current orientation
     NSLog(@"orientationChanged: %d", [[note object] orientation]);
+}
+
+- (void)faceDetected:(NSNotification *)note
+{
+    [self.window.rootViewController.view setBackgroundColor:[UIColor darkGrayColor]];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
