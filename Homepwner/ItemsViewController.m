@@ -21,7 +21,7 @@
         }
     }
     
-    UIImage *backgroundImage = [[UIImage alloc] initWithContentsOfFile:@"blueprint.jpg"];
+    UIImage *backgroundImage = [[UIImage alloc] initWithContentsOfFile:@"/Users/Jackson/Dropbox/iOS-Dev/BNR/Homepwner/Homepwner/blueprint.jpg"];
     UIImageView *imView = [[UIImageView alloc] initWithImage:backgroundImage];
     [[self tableView] setBackgroundView:imView];
     
