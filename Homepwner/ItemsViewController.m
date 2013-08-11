@@ -55,15 +55,18 @@
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
     BNRItem *p = [[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
-    
+    [[cell textLabel] setFont:[UIFont systemFontOfSize:20.0]];
     [[cell textLabel] setText:[p description]];
+    
+    if ([indexPath row] == [[[BNRItemStore sharedStore] allItems] count] - 1) {
+        [[cell textLabel] setFont:[UIFont systemFontOfSize:18.0]];
+    }
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d", [indexPath row]);
     if ([indexPath row] == [[[BNRItemStore sharedStore] allItems] count] - 1) {
         return 44.0;
     }
