@@ -133,4 +133,13 @@
     NSLog(@"View loaded");
     [[[BNRItemStore sharedStore] allItems] addObject:@"No more items!"];
 }
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath row] == [[[BNRItemStore sharedStore] allItems] count] - 1) {
+        return NO;
+    }
+    
+    return YES;
+}
 @end
