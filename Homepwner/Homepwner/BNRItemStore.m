@@ -17,6 +17,13 @@
     self = [super init];
     if (self) {
         allItems = [[NSMutableArray alloc] init];
+        
+        NSMutableArray *lessThanFifty = [[NSMutableArray alloc] init];
+        NSMutableArray *greaterThanFifty = [[NSMutableArray alloc] init];
+        
+        [allItems addObject:lessThanFifty];
+        [allItems addObject:greaterThanFifty];
+        
     }
     
     return self;
@@ -44,7 +51,11 @@
 {
     BNRItem *p = [BNRItem randomItem];
     
-    [allItems addObject:p];
+    if (p.valueInDollars <= 50) {
+        [[allItems objectAtIndex:0] addObject:p];
+    } else {
+        [[allItems objectAtIndex:1] addObject:p];
+    }
     
     return p;
 }

@@ -28,10 +28,19 @@
     return [self init];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[[BNRItemStore sharedStore] allItems] count];
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allItems] count];
+    NSLog(@"%ld", (long)section);
+    NSInteger result = [[[[BNRItemStore sharedStore] allItems] objectAtIndex:section] count];
+    NSLog(@"%d", result);
+    return result;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -49,12 +58,13 @@
     // Set the text of the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
-    BNRItem *p = [[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
-    
+    NSLog(@"%@", indexPath);
+    BNRItem *p = [[[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath section]] objectAtIndex:[indexPath row]];
     [[cell textLabel] setText:[p description]];
     
     return cell;
 }
+
 
 
 @end
