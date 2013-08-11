@@ -18,7 +18,7 @@
 // Notice that this is a class method and prefixed with a + instead of a -
 + (BNRItemStore *)sharedStore;
 
-- (NSArray *)allItems;
+- (NSMutableArray *)allItems;
 - (BNRItem *)createItem;
 - (void)removeItem:(BNRItem *)p;
 - (void)moveItemAtIndex:(int)from

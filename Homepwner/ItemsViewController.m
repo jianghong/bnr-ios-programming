@@ -99,8 +99,9 @@
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
     
     // Figure out where that item is in the array
+    // Add 1 because the 0 index has 'No More Items!'
     int lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
-    
+
     NSIndexPath *ip = [NSIndexPath indexPathForRow:lastRow inSection:0];
     
     // Insert this new row into the table
@@ -125,5 +126,11 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+}
+
+- (void)viewDidLoad
+{
+    NSLog(@"View loaded");
+    [[[BNRItemStore sharedStore] allItems] addObject:@"No more items!"];
 }
 @end

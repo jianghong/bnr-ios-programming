@@ -35,7 +35,7 @@
     return [self sharedStore];
 }
 
-- (NSArray *)allItems
+- (NSMutableArray *)allItems
 {
     return allItems;
 }
@@ -44,7 +44,7 @@
 {
     BNRItem *p = [BNRItem randomItem];
     
-    [allItems addObject:p];
+    [allItems insertObject:p atIndex:[allItems count] - 1];
     
     return p;
 }
