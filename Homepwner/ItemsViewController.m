@@ -20,6 +20,11 @@
             [[BNRItemStore sharedStore] createItem];
         }
     }
+    
+    UIImage *backgroundImage = [[UIImage alloc] initWithContentsOfFile:@"blueprint.jpg"];
+    UIImageView *imView = [[UIImageView alloc] initWithImage:backgroundImage];
+    [[self tableView] setBackgroundView:imView];
+    
     return self;
 }
 
@@ -56,5 +61,12 @@
     return cell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d", [indexPath row]);
+    if ([indexPath row] == [[[BNRItemStore sharedStore] allItems] count] - 1) {
+        return 44.0;
+    }
+    return 60.0;
+}
 @end
