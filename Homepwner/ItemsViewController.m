@@ -56,5 +56,43 @@
     return cell;
 }
 
+- (UIView *)headerView
+{
+    // If we haven't loaded the headerView yet...
+    if (!headerView) {
+        // Load HeaderView.xib
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    
+    return headerView;
+}
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [self headerView];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    // The height of the header view should be determined from the height of the
+    // view in the XIB file
+    return [[self headerView] bounds].size.height;
+    
+}
+
+- (IBAction)toggleEditingMode:(id)sender
+{
+    // If we are currently in editing mode...
+    if ([self isEditing]) {
+        // Change the text of button to inform user of state
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        // Turn off editing mode
+        [self setEditing:NO animated:YES];
+    } else {
+        // Change text of button to inform user of state
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        // Enter editing mode
+        [self setEditing:YES animated:YES];
+    }
+}
 @end

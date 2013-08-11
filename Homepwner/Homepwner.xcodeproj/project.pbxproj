@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A250FB517B81B090039B3F1 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		7A250FB517B81B090039B3F1 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
 		7A88611117B69D7200A9F094 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A88611417B69D7200A9F094 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A88611617B69D7200A9F094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,7 +62,6 @@
 		7A88610817B69D7200A9F094 = {
 			isa = PBXGroup;
 			children = (
-				7A250FB517B81B090039B3F1 /* HeaderView.xib */,
 				7A88611A17B69D7200A9F094 /* Homepwner */,
 				7A88611317B69D7200A9F094 /* Frameworks */,
 				7A88611217B69D7200A9F094 /* Products */,
@@ -90,6 +89,7 @@
 		7A88611A17B69D7200A9F094 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				7A250FB517B81B090039B3F1 /* HeaderView.xib */,
 				7A88613117B69E2900A9F094 /* ItemsViewController.h */,
 				7A88613217B69E2900A9F094 /* ItemsViewController.m */,
 				7A88612317B69D7200A9F094 /* HomepwnerAppDelegate.h */,
