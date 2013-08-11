@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ItemsViewController : UITableViewController
+{
+}
 
+@property (nonatomic) UITableView* tblView;
 @end

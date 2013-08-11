@@ -31,7 +31,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allItems] count];
+    return [[[BNRItemStore sharedStore] allItems] count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -49,9 +49,14 @@
     // Set the text of the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
     // will appear in on the tableview
-    BNRItem *p = [[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
-    
-    [[cell textLabel] setText:[p description]];
+    // if indexpath is the last row insert "No more items!"
+    if ([indexPath row] == [[[BNRItemStore sharedStore] allItems] count]) {
+        [[cell textLabel] setText:@"No more items!"];
+    } else {
+        BNRItem *p = [[[BNRItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
+        
+        [[cell textLabel] setText:[p description]];
+    }
     
     return cell;
 }
