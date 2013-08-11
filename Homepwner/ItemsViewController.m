@@ -125,9 +125,27 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    [[BNRItemStore sharedStore] moveItemAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+    // prevent rows from being moved to the last row where 'No more items!' is located
+    NSLog(@"%d", [destinationIndexPath row]);
+    NSLog(@"%d", [[[BNRItemStore sharedStore] allItems] count] -1);
+    if ([destinationIndexPath row] == [[[BNRItemStore sharedStore] allItems] count] -1) {
+        return;
+    } else {
+        [[BNRItemStore sharedStore] moveItemAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+    }
 }
 
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    int lastRow = [[[BNRItemStore sharedStore] allItems] count] - 1;
+    int proposedRow = [proposedDestinationIndexPath row];
+    
+    if (proposedRow == lastRow) {
+        return sourceIndexPath;
+    } else {
+        return proposedDestinationIndexPath;
+    }
+}
 - (void)viewDidLoad
 {
     NSLog(@"View loaded");
