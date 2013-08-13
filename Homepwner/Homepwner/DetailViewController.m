@@ -57,4 +57,22 @@
     [item setSerialNumber:[serialNumberField text]];
     [item setValueInDollars:[[valueField text] intValue]];
 }
+
+- (void)keyboardAway:(UITapGestureRecognizer *)recognizer
+{
+    if ([valueField isFirstResponder]) {
+        NSLog(@"Keyboard go away!");
+        [valueField resignFirstResponder];
+    }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([textField isEqual:valueField]) {
+        // code to resign first responder when tapped
+        UITapGestureRecognizer *singleTap =
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardAway:)];
+        [[self view] addGestureRecognizer:singleTap];
+    }
+}
 @end
