@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "BNRItem.h"
+#import "DatePickerViewController.h"
 
 @interface DetailViewController ()
 
@@ -56,5 +57,14 @@
     [item setItemName:[nameField text]];
     [item setSerialNumber:[serialNumberField text]];
     [item setValueInDollars:[[valueField text] intValue]];
+}
+- (IBAction)changeDate:(UIButton *)sender
+{
+    DatePickerViewController *dpvc = [[DatePickerViewController alloc] init];
+    [dpvc setItem:item];
+    
+    // push it onto top of navigation controller's stack
+    [[self navigationController] pushViewController:dpvc animated:YES];
+    
 }
 @end

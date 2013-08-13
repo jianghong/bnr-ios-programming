@@ -20,4 +20,7 @@
 
 @property (nonatomic, strong) BNRItem *item;
 
+- (IBAction)changeDate:(UIButton *)sender;
+
+
 @end
