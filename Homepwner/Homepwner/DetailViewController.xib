@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
             <connections>
                 <outlet property="dateLabel" destination="LpF-XT-2IZ" id="88b-gK-1l5"/>
+                <outlet property="imageView" destination="fZO-ht-o0j" id="eb8-kT-cTE"/>
                 <outlet property="nameField" destination="rR3-eh-Dhm" id="9ns-bP-tJy"/>
                 <outlet property="serialNumberField" destination="tf8-XY-DkA" id="0cg-xY-m7I"/>
                 <outlet property="valueField" destination="F8X-Mz-3n2" id="DOQ-ul-f4M"/>
@@ -70,6 +71,10 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZO-ht-o0j">
+                    <rect key="frame" x="20" y="273" width="280" height="275"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
