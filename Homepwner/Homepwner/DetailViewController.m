@@ -17,6 +17,11 @@
 
 @synthesize item;
 
+- (void)setItem:(BNRItem *)i
+{
+    item = i;
+    [[self navigationItem] setTitle:[item itemName]];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

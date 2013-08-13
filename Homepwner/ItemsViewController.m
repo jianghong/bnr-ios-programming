@@ -16,6 +16,8 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        UINavigationItem *n = [self navigationItem];
+        [n setTitle:@"Homepwner"];
     }
     return self;
 }
