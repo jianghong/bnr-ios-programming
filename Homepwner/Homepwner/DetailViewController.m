@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface DetailViewController ()
 
@@ -43,6 +44,19 @@
     
     // Use filtered NSDate object to set dateLabel contents
     [dateLabel setText:[df stringFromDate:[item dateCreated]]];
+    
+    NSString *imageKey = [item imageKey];
+    if (imageKey) {
+        // get that image for image key from image store
+        UIImage *imageToDisplay = [[BNRImageStore sharedStore] imageForKey:imageKey];
+        
+        // use that image to put on the screen in imageView
+        [imageView setImage:imageToDisplay];
+    } else {
+        // clear the imageView
+        [imageView setImage:nil];
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -77,8 +91,31 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    NSString *oldKey = [item imageKey];
+    // did the item already have an image?
+    if (oldKey) {
+        // delete the old iamge
+        [[BNRImageStore sharedStore] deleteImageForKey:oldKey];
+    }
+    
     // Get picked image from info dictionary
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    // Create a CFUUID object - it knows how to create unique identifier strings
+    CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
+    
+    // create a string from unique identifier
+    CFStringRef newUniqueString = CFUUIDCreateString(kCFAllocatorDefault, newUniqueID);
+    
+    // Use that unique ID to set our item's imageKey
+    NSString *key = (__bridge NSString *)newUniqueString;
+    [item setImageKey:key];
+    
+    // sore image in the BNRImageStore with this key
+    [[BNRImageStore sharedStore] setImage:image forKey:[item imageKey]];
+    
+    CFRelease(newUniqueString);
+    CFRelease(newUniqueID);
     
     // put that iamge onto the screen in our image view
     [imageView setImage:image];
@@ -88,4 +125,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

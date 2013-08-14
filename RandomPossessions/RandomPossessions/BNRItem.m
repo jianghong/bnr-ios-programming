@@ -11,6 +11,7 @@
 @implementation BNRItem
 @synthesize itemName;
 @synthesize container, containedItem, serialNumber, valueInDollars, dateCreated;
+@synthesize imageKey;
 
 + (id)randomItem {
     // Create an array of three adjectives

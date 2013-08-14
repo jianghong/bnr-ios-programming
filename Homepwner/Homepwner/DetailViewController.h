@@ -11,7 +11,7 @@
 @class BNRItem;
 
 @interface DetailViewController : UIViewController
-<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+<UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UITextField *serialNumberField;
