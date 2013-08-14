@@ -19,6 +19,7 @@
     __weak IBOutlet UILabel *dateLabel;
     __weak IBOutlet UIImageView *imageView;
 }
+- (IBAction)backgroundTapped:(id)sender;
 
 @property (nonatomic, strong) BNRItem *item;
 - (IBAction)takePicture:(id)sender;

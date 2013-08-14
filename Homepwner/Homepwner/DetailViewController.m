@@ -130,4 +130,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+- (IBAction)backgroundTapped:(id)sender {
+    [[self view] endEditing:YES];
+}
 @end
