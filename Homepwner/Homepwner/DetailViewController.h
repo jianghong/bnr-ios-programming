@@ -11,6 +11,7 @@
 @class BNRItem;
 
 @interface DetailViewController : UIViewController
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UITextField *serialNumberField;
@@ -20,5 +21,6 @@
 }
 
 @property (nonatomic, strong) BNRItem *item;
+- (IBAction)takePicture:(id)sender;
 
 @end

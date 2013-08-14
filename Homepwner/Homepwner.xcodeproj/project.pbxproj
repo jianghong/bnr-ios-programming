@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A5FECFD17B9BCA200DFBCAE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FECFB17B9BCA200DFBCAE /* DetailViewController.m */; };
 		7A5FECFE17B9BCA200DFBCAE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A5FECFC17B9BCA200DFBCAE /* DetailViewController.xib */; };
+		7A7E8EC917BAFEAA001AAF67 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E8EC817BAFEAA001AAF67 /* BNRImageStore.m */; };
 		7A88611517B69D7200A9F094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A88611417B69D7200A9F094 /* UIKit.framework */; };
 		7A88611717B69D7200A9F094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A88611617B69D7200A9F094 /* Foundation.framework */; };
 		7A88611917B69D7200A9F094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A88611817B69D7200A9F094 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 		7A5FECFA17B9BCA200DFBCAE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7A5FECFB17B9BCA200DFBCAE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7A5FECFC17B9BCA200DFBCAE /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		7A7E8EC717BAFEAA001AAF67 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRImageStore.h; path = ../BNRImageStore.h; sourceTree = "<group>"; };
+		7A7E8EC817BAFEAA001AAF67 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRImageStore.m; path = ../BNRImageStore.m; sourceTree = "<group>"; };
 		7A88611117B69D7200A9F094 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A88611417B69D7200A9F094 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A88611617B69D7200A9F094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,8 @@
 		7A88611A17B69D7200A9F094 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				7A7E8EC717BAFEAA001AAF67 /* BNRImageStore.h */,
+				7A7E8EC817BAFEAA001AAF67 /* BNRImageStore.m */,
 				7A88613117B69E2900A9F094 /* ItemsViewController.h */,
 				7A88613217B69E2900A9F094 /* ItemsViewController.m */,
 				7A88612317B69D7200A9F094 /* HomepwnerAppDelegate.h */,
@@ -191,6 +196,7 @@
 			files = (
 				7A88612117B69D7200A9F094 /* main.m in Sources */,
 				7A88612517B69D7200A9F094 /* HomepwnerAppDelegate.m in Sources */,
+				7A7E8EC917BAFEAA001AAF67 /* BNRImageStore.m in Sources */,
 				7A88613317B69E2900A9F094 /* ItemsViewController.m in Sources */,
 				7A88613917B6AFF300A9F094 /* BNRItem.m in Sources */,
 				7A88613C17B6B04A00A9F094 /* BNRItemStore.m in Sources */,

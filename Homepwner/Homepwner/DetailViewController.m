@@ -57,4 +57,35 @@
     [item setSerialNumber:[serialNumberField text]];
     [item setValueInDollars:[[valueField text] intValue]];
 }
+- (IBAction)takePicture:(id)sender {
+    UIImagePickerController *imagePicker =
+    [[UIImagePickerController alloc] init];
+    
+    // If our device has a camera, we want to take a picture, otherwise we
+    // just pick from photo libray
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    } else {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
+    
+    [imagePicker setDelegate:self];
+    
+    // Place image picker on the screen
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    // Get picked image from info dictionary
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    // put that iamge onto the screen in our image view
+    [imageView setImage:image];
+    
+    // take image picker off the screen -
+    // you must call this dismiss method
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
