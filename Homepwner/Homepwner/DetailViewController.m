@@ -133,4 +133,19 @@
 - (IBAction)backgroundTapped:(id)sender {
     [[self view] endEditing:YES];
 }
+
+- (IBAction)removePicture:(id)sender {
+    if ([imageView image]) {
+        NSLog(@"Picture removed");
+        
+        // clear image view
+        [imageView setImage:nil];
+        
+        // clear image store
+        [[BNRImageStore sharedStore] deleteImageForKey:[item imageKey]];
+    } else {
+        NSLog(@"No picture is set to be removed.");
+    }
+}
+
 @end

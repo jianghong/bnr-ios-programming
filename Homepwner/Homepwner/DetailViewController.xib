@@ -84,6 +84,11 @@
                                 <action selector="takePicture:" destination="-1" id="urm-3m-kK0"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem systemItem="stop" id="pCi-6L-k3t">
+                            <connections>
+                                <action selector="removePicture:" destination="-1" id="5hk-x7-Tyj"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>
