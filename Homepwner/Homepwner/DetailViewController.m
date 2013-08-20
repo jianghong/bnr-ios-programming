@@ -82,7 +82,7 @@
     } else {
         [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
-    
+    [imagePicker setAllowsEditing:YES];
     [imagePicker setDelegate:self];
     
     // Place image picker on the screen
@@ -99,7 +99,7 @@
     }
     
     // Get picked image from info dictionary
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     
     // Create a CFUUID object - it knows how to create unique identifier strings
     CFUUIDRef newUniqueID = CFUUIDCreate(kCFAllocatorDefault);
