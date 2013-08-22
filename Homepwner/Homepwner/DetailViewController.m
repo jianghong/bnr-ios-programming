@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import "BNRImageStore.h"
 #import "BNRItemStore.h"
+#import "ItemsViewController.h"
 
 @interface DetailViewController ()
 
@@ -79,7 +80,17 @@
     [item setItemName:[nameField text]];
     [item setSerialNumber:[serialNumberField text]];
     [item setValueInDollars:[[valueField text] intValue]];
+    
+    // Silver Challenge Addition
+    // Need to reload data upon detail view disappearing
+    UIViewController *navController = [self presentingViewController];
+    UIViewController *ivc = [(UINavigationController *)navController topViewController];
+    [[(ItemsViewController *)ivc tableView] reloadData];
 }
+
+- (void)viewDidDisappear:(BOOL)animated {
+}
+
 - (IBAction)takePicture:(id)sender {
     if ([imagePickerPopover isPopoverVisible]) {
         // the the popover is already up, get rid of it
