@@ -178,4 +178,31 @@
     NSLog(@"User dismissed popover");
     imagePickerPopover = nil;
 }
+
+- (id)initForNewItem:(BOOL)isNew {
+    self = [super initWithNibName:@"DetailViewController" bundle:nil];
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem = [[UIBarButtonItem alloc]
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                         target:self
+                                         action:@selector(save:)];
+            [[self navigationItem] setRightBarButtonItem:doneItem];
+            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                           target:self
+                                           action:@selector(cancel:)];
+            [[self navigationItem] setLeftBarButtonItem:cancelItem];
+        }
+    }
+    
+    return self;
+    
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:@"Wrong Init" reason:@"Use initForNewItem" userInfo:nil];
+    
+    return nil;
+}
 @end
