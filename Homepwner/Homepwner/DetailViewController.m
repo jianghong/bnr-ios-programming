@@ -79,6 +79,12 @@
     [item setValueInDollars:[[valueField text] intValue]];
 }
 - (IBAction)takePicture:(id)sender {
+    if ([imagePickerPopover isPopoverVisible]) {
+        // the the popover is already up, get rid of it
+        [imagePickerPopover dismissPopoverAnimated:YES];
+        imagePickerPopover = nil;
+        return;
+    }
     UIImagePickerController *imagePicker =
     [[UIImagePickerController alloc] init];
     
@@ -141,7 +147,14 @@
     
     // take image picker off the screen -
     // you must call this dismiss method
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        // If on the phone, the image picker is presented modally. Dismiss it.
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        // if on the pad, the image picker is in the popover. Dismiss the popover.
+        [imagePickerPopover dismissPopoverAnimated:YES];
+        imagePickerPopover = nil;
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -159,5 +172,10 @@
     } else {
         return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
     }
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    NSLog(@"User dismissed popover");
+    imagePickerPopover = nil;
 }
 @end
