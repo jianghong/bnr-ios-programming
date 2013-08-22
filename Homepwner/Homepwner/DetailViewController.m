@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "BNRItem.h"
 #import "BNRImageStore.h"
+#import "BNRItemStore.h"
 
 @interface DetailViewController ()
 
@@ -205,4 +206,17 @@
     
     return nil;
 }
+
+- (void)save:(id)sender {
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)cancel:(id)sender {
+    // if the user cancelled, then remove the BNRItem from the store
+    [[BNRItemStore sharedStore] removeItem:item];
+    
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 @end
