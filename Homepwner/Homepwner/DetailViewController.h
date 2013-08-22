@@ -27,5 +27,6 @@ UIPopoverControllerDelegate>
 - (id)initForNewItem:(BOOL)isNew;
 
 @property (nonatomic, strong) BNRItem *item;
+@property (nonatomic, copy) void (^dismissBlock) (void);
 
 @end

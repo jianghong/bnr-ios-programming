@@ -18,6 +18,7 @@
 @implementation DetailViewController
 
 @synthesize item;
+@synthesize dismissBlock;
 
 - (void)setItem:(BNRItem *)i
 {
@@ -208,14 +209,14 @@
 }
 
 - (void)save:(id)sender {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissBlock];
 }
 
 - (void)cancel:(id)sender {
     // if the user cancelled, then remove the BNRItem from the store
     [[BNRItemStore sharedStore] removeItem:item];
     
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:dismissBlock];
 }
 
 
