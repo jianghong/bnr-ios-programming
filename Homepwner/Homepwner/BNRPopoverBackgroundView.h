@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface BNRPopoverBackgroundView : UIPopoverBackgroundView
+{
+    UIImageView *_borderImageView;
+    UIImageView *_arrowView;
+    CGFloat _arrowOffset;
+    UIPopoverArrowDirection _arrowDirection;
+}
 + (UIEdgeInsets)contentViewInsets;
 + (CGFloat)arrowHeight;
 + (CGFloat)arrowBase;
-+ (BOOL)wantsDefaultContentAppearance;
 
-@property (nonatomic, readwrite) CGFloat arrowOffset;
-@property (nonatomic, readwrite) UIPopoverArrowDirection arrowDirection;
 @end

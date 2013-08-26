@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import "BNRImageStore.h"
 #import "BNRItemStore.h"
+#import "BNRPopoverBackgroundView.h"
 
 @interface DetailViewController ()
 
@@ -105,6 +106,9 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         // Create a new popover controller that will display the imagePicker
         imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        // Create popover background view
+        [imagePickerPopover setPopoverBackgroundViewClass:[BNRPopoverBackgroundView class]];
+        
         [imagePickerPopover setDelegate:self];
         
         // Display the popover controller; sender

@@ -23,6 +23,9 @@
 		7A88613317B69E2900A9F094 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A88613217B69E2900A9F094 /* ItemsViewController.m */; };
 		7A88613917B6AFF300A9F094 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A88613817B6AFF300A9F094 /* BNRItem.m */; };
 		7A88613C17B6B04A00A9F094 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A88613B17B6B04A00A9F094 /* BNRItemStore.m */; };
+		7AF38B8E17CB9607005679C2 /* popoverimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF38B8D17CB9607005679C2 /* popoverimage.png */; };
+		7AF38B9117CBA65F005679C2 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF38B8F17CBA65F005679C2 /* arrow.png */; };
+		7AF38B9217CBA65F005679C2 /* popover-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF38B9017CBA65F005679C2 /* popover-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		7A88613817B6AFF300A9F094 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItem.m; path = ../../RandomPossessions/RandomPossessions/BNRItem.m; sourceTree = "<group>"; };
 		7A88613A17B6B04A00A9F094 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		7A88613B17B6B04A00A9F094 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		7AF38B8D17CB9607005679C2 /* popoverimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverimage.png; sourceTree = "<group>"; };
+		7AF38B8F17CBA65F005679C2 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		7AF38B9017CBA65F005679C2 /* popover-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +127,10 @@
 		7A88611B17B69D7200A9F094 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7AF38B8F17CBA65F005679C2 /* arrow.png */,
+				7AF38B9017CBA65F005679C2 /* popover-bg.png */,
 				7A88611C17B69D7200A9F094 /* Homepwner-Info.plist */,
+				7AF38B8D17CB9607005679C2 /* popoverimage.png */,
 				7A88611D17B69D7200A9F094 /* InfoPlist.strings */,
 				7A88612017B69D7200A9F094 /* main.m */,
 				7A88612217B69D7200A9F094 /* Homepwner-Prefix.pch */,
@@ -189,6 +198,9 @@
 				7A88612717B69D7200A9F094 /* Default.png in Resources */,
 				7A88612917B69D7200A9F094 /* Default@2x.png in Resources */,
 				7A88612B17B69D7200A9F094 /* Default-568h@2x.png in Resources */,
+				7AF38B9117CBA65F005679C2 /* arrow.png in Resources */,
+				7AF38B8E17CB9607005679C2 /* popoverimage.png in Resources */,
+				7AF38B9217CBA65F005679C2 /* popover-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
