@@ -25,4 +25,6 @@
                 toIndex:(int)to;
 
 - (NSString *)itemArchivePath;
+- (BOOL)saveChanges;
+
 @end
