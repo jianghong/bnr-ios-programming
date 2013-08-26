@@ -8,7 +8,7 @@
 
 #import "BNRItemStore.h"
 #import "BNRItem.h"
-
+#import "BNRImageStore.h"
 
 @implementation BNRItemStore
 
@@ -48,7 +48,7 @@
 
 - (BNRItem *)createItem
 {
-    BNRItem *p = [BNRItem randomItem];
+    BNRItem *p = [[BNRItem alloc] init];
     
     [allItems addObject:p];
     
@@ -57,6 +57,8 @@
 
 - (void)removeItem:(BNRItem *)p
 {
+    NSString *key = [p imageKey];
+    [[BNRImageStore sharedStore] deleteImageForKey:key];
     [allItems removeObjectIdenticalTo:p];
 }
 
@@ -90,4 +92,5 @@
     NSString *path = [self itemArchivePath];
     return [NSKeyedArchiver archiveRootObject:allItems toFile:path];
 }
+
 @end
