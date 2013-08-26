@@ -69,4 +69,14 @@
     // Insert p in array at new location
     [allItems insertObject:p atIndex:to];
 }
+
+- (NSString *)itemArchivePath {
+    NSArray *documentDirectories =
+    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    // Get one and only document directory from that list
+    NSString *documentDirectory = [documentDirectories objectAtIndex:0];
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+}
+
 @end
