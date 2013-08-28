@@ -28,4 +28,23 @@
 {
     return [self initWithCoordinate:CLLocationCoordinate2DMake(43.07, -89.32) title:@"Hometown"];
 }
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:title forKey:@"title"];
+    [aCoder encodeDouble:coordinate.latitude forKey:@"latitude"];
+    [aCoder encodeDouble:coordinate.longitude forKey:@"longitude"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        [self setTitle:[aDecoder decodeObjectForKey:@"title"]];
+        [self
+         setCoordinate:CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:@"latitude"],
+                                                  [aDecoder decodeDoubleForKey:@"longitude"])];
+    }
+    
+    return self;
+}
+
 @end
