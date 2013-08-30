@@ -39,9 +39,9 @@
     self = [super init];
     if (self) {
         [self setTitle:[aDecoder decodeObjectForKey:@"title"]];
-        [self
-         setCoordinate:CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:@"lat"],
-                                                  [aDecoder decodeDoubleForKey:@"long"])];
+        CLLocationCoordinate2D c = CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:@"lat"],
+                                   [aDecoder decodeDoubleForKey:@"long"]);
+        [self setCoordinate:c];
     }
     
     return self;

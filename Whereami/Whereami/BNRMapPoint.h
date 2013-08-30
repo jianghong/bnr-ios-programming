@@ -18,7 +18,7 @@
 - (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t;
 
 // This is a required property from MKAnnotation
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 // This is an optional property from MKAnnotation
 @property (nonatomic, copy) NSString *title;
