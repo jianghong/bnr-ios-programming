@@ -9,6 +9,7 @@
 #import "WhereamiAppDelegate.h"
 
 #import "WhereamiViewController.h"
+#import "BNRMapPointStore.h"
 
 @implementation WhereamiAppDelegate
 
@@ -19,6 +20,7 @@
     self.viewController = [[WhereamiViewController alloc] initWithNibName:@"WhereamiViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -32,6 +34,12 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    BOOL success = [[BNRMapPointStore sharedStore] saveChanges];
+    if (success) {
+        NSLog(@"Saved all map points");
+    } else {
+        NSLog(@"Could not save map points");
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

@@ -31,8 +31,8 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:title forKey:@"title"];
-    [aCoder encodeDouble:coordinate.latitude forKey:@"latitude"];
-    [aCoder encodeDouble:coordinate.longitude forKey:@"longitude"];
+    [aCoder encodeDouble:coordinate.latitude forKey:@"lat"];
+    [aCoder encodeDouble:coordinate.longitude forKey:@"long"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -40,8 +40,8 @@
     if (self) {
         [self setTitle:[aDecoder decodeObjectForKey:@"title"]];
         [self
-         setCoordinate:CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:@"latitude"],
-                                                  [aDecoder decodeDoubleForKey:@"longitude"])];
+         setCoordinate:CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:@"lat"],
+                                                  [aDecoder decodeDoubleForKey:@"long"])];
     }
     
     return self;

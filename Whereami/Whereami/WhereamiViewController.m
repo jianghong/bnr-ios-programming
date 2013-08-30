@@ -8,6 +8,7 @@
 
 #import "WhereamiViewController.h"
 #import "BNRMapPoint.h"
+#import "BNRMapPointStore.h"
 
 @interface WhereamiViewController ()
 
@@ -18,6 +19,11 @@
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
+    // load map points stored in BNRMapPointStore
+    for (BNRMapPoint* mp in [[BNRMapPointStore sharedStore] allPoints]) {
+        [worldView addAnnotation:mp];
+    }
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -99,8 +105,7 @@ didFailWithError:(NSError *)error
     CLLocationCoordinate2D coord = [loc coordinate];
     
     // Create an instance of BNRMapPoint with the current data
-    
-    BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord title:[locationTitleField text]];
+    BNRMapPoint *mp = [[BNRMapPointStore sharedStore] createPointWithCoord:coord title:[locationTitleField text]];
    
     // Add it to the map view
     [worldView addAnnotation:mp];

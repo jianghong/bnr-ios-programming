@@ -14,6 +14,9 @@
 - (id)init {
     self = [super init];
     if (self) {
+        NSString *path = [self itemArchivePath];
+        allPoints = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        
         if (!allPoints) {
             allPoints = [[NSMutableArray alloc] init];
         }
