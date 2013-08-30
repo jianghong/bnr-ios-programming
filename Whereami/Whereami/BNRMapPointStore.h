@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @class BNRMapPoint;
 
@@ -17,7 +18,7 @@
 + (BNRMapPointStore *)sharedStore;
 
 - (NSArray *)allPoints;
-- (BNRMapPoint *)createPoint;
+- (BNRMapPoint *)createPointWithCoord:(CLLocationCoordinate2D)c title:(NSString *)t;
 - (NSString *)itemArchivePath;
 - (BOOL)saveChanges;
 

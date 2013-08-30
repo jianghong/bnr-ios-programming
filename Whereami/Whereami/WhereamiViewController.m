@@ -102,11 +102,6 @@ didFailWithError:(NSError *)error
     
     BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord title:[locationTitleField text]];
    
-    NSDictionary *mpdict = [self createMapPointDicionary:mp];
-    
-    // save map point
-    [self saveMapPoint:mpdict];
-    
     // Add it to the map view
     [worldView addAnnotation:mp];
     
@@ -121,44 +116,5 @@ didFailWithError:(NSError *)error
     [locationManager stopUpdatingLocation];
 }
 
-- (BOOL)saveMapPoint:(NSDictionary *) mp {
-    NSLog(@"Save map point");
-    
-    // returns success or failure
-    NSString *path = [self itemArchivePath:mp];
-    
-    return [NSKeyedArchiver archiveRootObject:mp toFile:path];
-    
-}
 
-- (NSString *)itemArchivePath:(NSDictionary *)mp {
-    NSArray *documentDirectories =
-    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    // Get one and only document directory from that list
-    NSString *documentDirectory = [documentDirectories objectAtIndex:0];
-    
-    // Create unique name for point
-    NSString *unique = [NSString stringWithFormat:@"%@(%@, %@)",
-                        mp[@"mapTitle"],
-                        mp[@"mapLat"],
-                        mp[@"mapLong"]];
-    NSString *ddpath = [documentDirectory stringByAppendingPathComponent:@"map-point:"];
-    
-    
-    return [NSString stringWithFormat:@"%@%@", ddpath, unique];
-    
-}
-
-- (NSDictionary *)createMapPointDicionary:(BNRMapPoint *) mp {
-    NSString *title = [mp title];
-    int latitude = [mp coordinate].latitude;
-    int longitude = [mp coordinate].longitude;
-    
-    NSDictionary *result = @{@"mapTitle": title,
-                             @"mapLat": [NSNumber numberWithInt:latitude],
-                             @"mapLong": [NSNumber numberWithInt:longitude]};
-    
-    return result;
-}
 @end

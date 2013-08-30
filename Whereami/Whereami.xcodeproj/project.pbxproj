@@ -97,6 +97,8 @@
 		7A36FD3B17AF3981005754DC /* Whereami */ = {
 			isa = PBXGroup;
 			children = (
+				7A3184C017D0F247009902A4 /* BNRMapPointStore.h */,
+				7A3184C117D0F247009902A4 /* BNRMapPointStore.m */,
 				7A36FD4417AF3981005754DC /* WhereamiAppDelegate.h */,
 				7A36FD4517AF3981005754DC /* WhereamiAppDelegate.m */,
 				7A36FD4D17AF3981005754DC /* WhereamiViewController.h */,
@@ -119,8 +121,6 @@
 				7A36FD4717AF3981005754DC /* Default.png */,
 				7A36FD4917AF3981005754DC /* Default@2x.png */,
 				7A36FD4B17AF3981005754DC /* Default-568h@2x.png */,
-				7A3184C017D0F247009902A4 /* BNRMapPointStore.h */,
-				7A3184C117D0F247009902A4 /* BNRMapPointStore.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
