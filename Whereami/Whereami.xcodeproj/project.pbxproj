@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3184C217D0F247009902A4 /* BNRMapPointStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3184C117D0F247009902A4 /* BNRMapPointStore.m */; };
 		7A36FD3617AF3981005754DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A36FD3517AF3981005754DC /* UIKit.framework */; };
 		7A36FD3817AF3981005754DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A36FD3717AF3981005754DC /* Foundation.framework */; };
 		7A36FD3A17AF3981005754DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A36FD3917AF3981005754DC /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3184C017D0F247009902A4 /* BNRMapPointStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPointStore.h; sourceTree = "<group>"; };
+		7A3184C117D0F247009902A4 /* BNRMapPointStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPointStore.m; sourceTree = "<group>"; };
 		7A36FD3217AF3981005754DC /* Whereami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A36FD3517AF3981005754DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A36FD3717AF3981005754DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				7A36FD4717AF3981005754DC /* Default.png */,
 				7A36FD4917AF3981005754DC /* Default@2x.png */,
 				7A36FD4B17AF3981005754DC /* Default-568h@2x.png */,
+				7A3184C017D0F247009902A4 /* BNRMapPointStore.h */,
+				7A3184C117D0F247009902A4 /* BNRMapPointStore.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3184C217D0F247009902A4 /* BNRMapPointStore.m in Sources */,
 				7A36FD4217AF3981005754DC /* main.m in Sources */,
 				7A36FD4617AF3981005754DC /* WhereamiAppDelegate.m in Sources */,
 				7A36FD4F17AF3981005754DC /* WhereamiViewController.m in Sources */,
