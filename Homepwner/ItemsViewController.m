@@ -56,6 +56,9 @@
     // Get the new or recycled cell
     HomepwnerItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomepwnerItemCell"];
     
+    [cell setController:self];
+    [cell setTableView:tableView];
+    
     // Configure the cell with the BNRItem
     [[cell nameLabel] setText:[p itemName]];
     [[cell serialNumberLabel] setText:[p serialNumber]];
@@ -161,4 +164,8 @@
            forCellReuseIdentifier:@"HomepwnerItemCell"];
 }
 
+
+- (void)showImage:(id)sender atIndexPath:(NSIndexPath *)ip {
+    NSLog(@"Going to show image for %@", ip);
+}
 @end

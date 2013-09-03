@@ -37,6 +37,15 @@
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Ol-Va-PaG">
+                        <rect key="frame" x="0.0" y="-2" width="51" height="43"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="showImage:" destination="6eR-ky-yf7" eventType="touchUpInside" id="vBx-dE-cgY"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
