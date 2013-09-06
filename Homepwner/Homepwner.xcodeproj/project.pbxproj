@@ -26,6 +26,7 @@
 		7AAC3C1817D627CA00A42295 /* HomepwnerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC3C1717D627CA00A42295 /* HomepwnerItemCell.xib */; };
 		7AAC3C1C17D683D800A42295 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC3C1A17D683D800A42295 /* ImageViewController.m */; };
 		7AAC3C1D17D683D800A42295 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC3C1B17D683D800A42295 /* ImageViewController.xib */; };
+		7AF4EA1117D9568A00248423 /* BNRTableCellForwarderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4EA1017D9568A00248423 /* BNRTableCellForwarderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		7AAC3C1917D683D800A42295 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = ../ImageViewController.h; sourceTree = "<group>"; };
 		7AAC3C1A17D683D800A42295 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = ../ImageViewController.m; sourceTree = "<group>"; };
 		7AAC3C1B17D683D800A42295 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageViewController.xib; path = ../ImageViewController.xib; sourceTree = "<group>"; };
+		7AF4EA0F17D9568A00248423 /* BNRTableCellForwarderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRTableCellForwarderCell.h; path = ../BNRTableCellForwarderCell.h; sourceTree = "<group>"; };
+		7AF4EA1017D9568A00248423 /* BNRTableCellForwarderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRTableCellForwarderCell.m; path = ../BNRTableCellForwarderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		7A88611A17B69D7200A9F094 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				7AF4EA0F17D9568A00248423 /* BNRTableCellForwarderCell.h */,
+				7AF4EA1017D9568A00248423 /* BNRTableCellForwarderCell.m */,
 				7AAC3C1917D683D800A42295 /* ImageViewController.h */,
 				7AAC3C1A17D683D800A42295 /* ImageViewController.m */,
 				7AAC3C1B17D683D800A42295 /* ImageViewController.xib */,
@@ -218,6 +223,7 @@
 				7A7E8EC917BAFEAA001AAF67 /* BNRImageStore.m in Sources */,
 				7A88613317B69E2900A9F094 /* ItemsViewController.m in Sources */,
 				7A88613917B6AFF300A9F094 /* BNRItem.m in Sources */,
+				7AF4EA1117D9568A00248423 /* BNRTableCellForwarderCell.m in Sources */,
 				7AAC3C1C17D683D800A42295 /* ImageViewController.m in Sources */,
 				7A88613C17B6B04A00A9F094 /* BNRItemStore.m in Sources */,
 				7A5FECFD17B9BCA200DFBCAE /* DetailViewController.m in Sources */,
