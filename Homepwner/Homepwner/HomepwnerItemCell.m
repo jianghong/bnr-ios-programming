@@ -44,6 +44,7 @@
             [[self controller] performSelector:newSelector
                                     withObject:sender
                                     withObject:indexPath];
+            [[self controller] perform]
         }
     }
 }
