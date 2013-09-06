@@ -64,6 +64,14 @@
     // Configure the cell with the BNRItem
     [[cell nameLabel] setText:[p itemName]];
     [[cell serialNumberLabel] setText:[p serialNumber]];
+    // check if valueInDollars is greater than 50
+    // change highlighting depending on valueInDollars
+    [[cell valueLabel] setHighlighted:YES];
+    if ([p valueInDollars] > 50) {
+        [[cell valueLabel] setHighlightedTextColor:[UIColor greenColor]];
+    } else {
+        [[cell valueLabel] setHighlightedTextColor:[UIColor redColor]];
+    }
     [[cell valueLabel] setText:[NSString stringWithFormat:@"$%d", [p valueInDollars]]];
     
     [[cell thumbnailView] setImage:[p thumbnail]];
@@ -205,4 +213,5 @@
     [imagePopover dismissPopoverAnimated:YES];
     imagePopover = nil;
 }
+
 @end
